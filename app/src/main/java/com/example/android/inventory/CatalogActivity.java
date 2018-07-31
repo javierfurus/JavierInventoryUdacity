@@ -11,21 +11,21 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.android.inventory.data.ProductContract.ProductEntry;
-import com.example.android.inventory.data.prodDbHelper;
+import com.example.android.inventory.data.ProductDbHelper;
 
 /**
  * Displays list of products that were entered and stored in the app.
  */
 public class CatalogActivity extends AppCompatActivity {
 
-    prodDbHelper mDbHelper;
+    ProductDbHelper mDbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalog);
 
-        mDbHelper = new prodDbHelper(this);
+        mDbHelper = new ProductDbHelper(this);
     }
 
     @Override
